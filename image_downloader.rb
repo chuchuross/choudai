@@ -1,8 +1,5 @@
 # coding : utf-8
 
-require 'rubygems'
-require 'zipruby'
-
 class ImageDownloader
 
   # @param [String] url
