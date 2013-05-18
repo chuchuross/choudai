@@ -43,6 +43,7 @@ begin
   end
 rescue URI::InvalidURIError
   puts 'URLの形式が正しくないか入力されてない可能性があります -l <URL> で指定'
-rescue
+rescue => e
   puts '画像の取得に失敗しました'
+  puts e.message
 end

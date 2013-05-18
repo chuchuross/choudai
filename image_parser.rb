@@ -5,7 +5,7 @@ require 'open-uri'
 
 class ImageParser
   # @param [URI] uri
-  #@return [Array] image url string array
+  # @return [Array] image url string array
   def parseFromUrl(uri)
     image_url_list = Array.new
     document = Nokogiri::HTML(open(uri))
