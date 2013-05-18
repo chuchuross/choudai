@@ -1,7 +1,6 @@
 # coding : utf-8
 
 class ImageDownloader
-
   # @param [String] url
   # @param [String] path
   # @param [String] file_name

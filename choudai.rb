@@ -36,7 +36,7 @@ begin
     puts '取得できる画像がありませんでした'
     exit
   end
-  progress_bar =ProgressBar.create(:format => '%a |%b>>%i| %p%% %t', :total => image_url_list.length)
+  progress_bar = ProgressBar.create(:format => '%a |%b>>%i| %p%% %t', :total => image_url_list.length)
   image_url_list.each do |image_url|
     ImageDownloader::download(image_url, path, File.basename(image_url), use_zip)
     progress_bar.increment
