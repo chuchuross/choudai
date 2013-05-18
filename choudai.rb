@@ -3,8 +3,8 @@
 require 'uri'
 require 'optparse'
 require 'ruby-progressbar'
-require './image_parser'
-require './image_downloader'
+require './lib/image_parser'
+require './lib/image_downloader'
 
 use_zip = false
 url = nil
