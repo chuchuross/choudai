@@ -31,7 +31,7 @@ end
 begin
   raise ArgumentError.new('保存先のパスを指定してください -h でヘルプ') if path == nil
   image_parser = ImageParser.new
-  image_url_list = image_parser.parseFromUrl(URI.parse(url))
+  image_url_list = image_parser.parse_from_url(URI.parse(url))
   if image_url_list.length <= 0
     puts '取得できる画像がありませんでした'
     exit
