@@ -7,25 +7,14 @@ require './image_parser'
 require './image_downloader'
 
 use_zip = false
-show_help = false
 url = nil
 path = nil
 
 OptionParser.new do |option|
   # option.on('-z') { use_zip = true }
-  option.on('-h') { |value| show_help = value }
-  option.on('-l URL') { |value| url = value }
-  option.on('-p PATH') { |value| path = value }
+  option.on('-l URL', '取得先のURLを指定します') { |value| url = value }
+  option.on('-p PATH', '保存先のパスを指定します') { |value| path = value }
   option.parse!(ARGV)
-end
-
-if show_help
-  puts <<-"EOS"
- -l <URL> 取得先のURLを指定します
- -p <path> 保存先のパスを指定します
- -h ヘルプを表示します
-  EOS
-  exit
 end
 
 begin
